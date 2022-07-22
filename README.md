@@ -21,6 +21,6 @@ This is my first attempt at being a real software developer. I have done this pr
 - add leaderboard
    - how many tasks completed
 
-## Implemented
+## Progress
 
-- I will try my best
+- created a new branch where ill change the *complete task* mechanic
