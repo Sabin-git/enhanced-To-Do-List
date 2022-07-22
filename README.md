@@ -6,21 +6,21 @@ This is my first attempt at being a real software developer. I have done this pr
 
 ## To-implement
 
--change mechanic for complete
-    --remove complete boolean
-    --add a button for complete task next to delete (for uncompleted tasks)
-    --completed tasks will be crossed out to the bottom of the list
-    --completed tasks only have the delete button available
--change mechanic for edit
-    --when clicking on a task you'll see details of it
-    --add a 'Edit' button, which edits the fiels
--add priority mechanic
-    --low, medium, high priority
--add difficulty mechanic
-    --hard, doable, easy
--add leaderboard
-    --how many tasks completed
+- change mechanic for complete
+   - remove complete boolean
+   - add a button for complete task next to delete (for uncompleted tasks)
+   - completed tasks will be crossed out to the bottom of the list
+   - completed tasks only have the delete button available
+- change mechanic for edit
+   - when clicking on a task you'll see details of it
+   - add a 'Edit' button, which edits the fiels
+- add priority mechanic
+   - low, medium, high priority
+- add difficulty mechanic
+   - hard, doable, easy
+- add leaderboard
+   - how many tasks completed
 
 ## Implemented
 
--bruh
+- I will try my best
