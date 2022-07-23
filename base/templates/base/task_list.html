@@ -31,16 +31,27 @@
                     <div class="task-complete-icon"></div>
                     <i><s><a href="{% url 'edit' task.id %}">{{task}}</a></s></i>
                 </div>
-                <a class="delete-link" href="{% url 'delete' task.id %}"><span>&#10005;</span></a>
+                <a class="delete-link" href="{% url 'delete' task.id %}" style="font-size: 26px;"><span>&#10005;</span></a>
 
-                {% else %}
-                <div class="task-title">
-                    <div class="task-incomplete-icon"></div>
-                    <a href="{% url 'edit' task.id %}">{{task}}</a>
-                </div>
-                <a class="delete-link" href="{% url 'delete' task.id %}"><span>&#10003;</span></a>
-            {% endif %}
+            {% else %}
+            <div class="task-title">
+                <div class="task-incomplete-icon"></div>
+                <a href="{% url 'edit' task.id %}">{{task}}</a>
+            </div>
+
             
+            <div>
+                <a class="delete-link" href="{% url 'complete' task.id %}" style="font-size: 30px;">&#10003;</a>
+                <a class="delete-link" href="{% url 'delete' task.id %}" style="font-size: 26px;">&#10005;</a>
+            </div>
+            
+<!--
+            <div>
+                <a class="button" href="{% url 'complete' task.id %}">Finish</a>
+                <a class="button" href="{% url 'delete' task.id %}">Delete</a>
+            </div>
+        -->
+            {% endif %}
         </div>
     {% empty %}
     <h3>No items in list</h3>

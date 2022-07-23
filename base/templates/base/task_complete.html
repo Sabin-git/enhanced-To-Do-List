@@ -8,8 +8,12 @@
 <div class="card-body">
     <form method="POST">
         {% csrf_token %}
-        <p>Are you sure you want to delete task "{{task}}"?</p>
-        <input class="button" type="submit" value="Delete">
+        <p>Are you sure you want to complete the task "{{task}}"?</p>
+        <div>
+            {{form.complete}}
+            <input class="button" type="submit" value="Confirm">
+        </div>
+        
     </form>
 </div>
 

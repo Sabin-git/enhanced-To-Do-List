@@ -20,7 +20,9 @@ This is my first attempt at being a real software developer. I have done this pr
    - hard, doable, easy
 - add leaderboard
    - how many tasks completed
+- hide completed tasks
+   - put them in a separate url or hide/show within the main url
 
 ## Implemented
 
-- I will try my best
+- Complete button v1.0
