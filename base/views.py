@@ -1,7 +1,6 @@
 from .models import Task
 from django.shortcuts import redirect, render
 from django.views.generic.list import ListView
-from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
 from django.urls import reverse_lazy
 
@@ -41,6 +40,7 @@ class UserRegister(FormView):
 class TaskList(LoginRequiredMixin, ListView):
     model = Task
     context_object_name = 'tasks'
+    template_name = 'base/home.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -53,12 +53,6 @@ class TaskList(LoginRequiredMixin, ListView):
 
         context['search_input'] = search_input
         return context
-
-
-
-class TaskDetail(LoginRequiredMixin, DetailView):
-    model = Task
-    context_object_name = 'task'
 
 
 class TaskCreate(LoginRequiredMixin, CreateView):
@@ -75,16 +69,18 @@ class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task
     fields = ['title', 'description'] 
     success_url = reverse_lazy('tasks')
+    template_name = 'base/edit.html'
 
 
 class TaskComplete(LoginRequiredMixin, UpdateView):
     model = Task
     fields = ['complete']
     success_url = reverse_lazy('tasks')
-    template_name = 'base/task_complete.html'
+    template_name = 'base/finish.html'
 
 
 class TaskDelete(LoginRequiredMixin, DeleteView ):
     model = Task
     context_object_name = 'task'
     success_url = reverse_lazy('tasks')
+    template_name = 'base/delete.html'
