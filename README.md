@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is my first attempt at being a real software developer. I have done this project following a youtube tutorial, now I want to add a few features of my own.
+I have done this project following a youtube tutorial, now I want to add a few features of my own.
 
 ## To-implement
 
